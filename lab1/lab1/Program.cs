@@ -17,7 +17,7 @@ namespace lab1
             int i;
             int sum = 0, compos = 1;
             int[] arr = number.ToString().ToCharArray().Select(x => x - '0').ToArray();
-            for (i = 0; i < 4; i++)
+            for (i = 0; i < arr.Length; i++)
             {
                 sum = sum + arr[i];
                 compos = compos * arr[i];
