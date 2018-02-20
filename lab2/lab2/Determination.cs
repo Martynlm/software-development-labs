@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab2
 {
@@ -10,14 +6,14 @@ namespace lab2
     {
         public int Redefinition(string primary)
         {
-            int value=1;
+            int value=1; //If string is int
             if (!Int32.TryParse(primary, out int intnumber))
             {
-                value = 2;
+                value = 2;//If string is double
              }
             if (!Double.TryParse(primary, out double doublenumber))
             {
-                value = 0;
+                value = 0;//If string can not be a number
             }
             return value;
         }

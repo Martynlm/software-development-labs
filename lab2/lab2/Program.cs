@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace lab2
 {
     class Program
@@ -12,7 +11,6 @@ namespace lab2
             int resultValue = calculator.Redefinition(primarystring);
             Console.WriteLine(resultValue);
             Console.ReadLine();
-
         }
     }
 }
