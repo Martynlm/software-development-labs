@@ -5,3 +5,10 @@ C:\Users\hockr\source\repos\lab6\lab6\obj\Debug\lab6.csprojResolveAssemblyRefere
 C:\Users\hockr\source\repos\lab6\lab6\obj\Debug\lab6.csproj.CoreCompileInputs.cache
 C:\Users\hockr\source\repos\lab6\lab6\obj\Debug\lab6.exe
 C:\Users\hockr\source\repos\lab6\lab6\obj\Debug\lab6.pdb
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab6\lab6\bin\Debug\lab6.exe.config
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab6\lab6\bin\Debug\lab6.exe
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab6\lab6\bin\Debug\lab6.pdb
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab6\lab6\obj\Debug\lab6.csprojResolveAssemblyReference.cache
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab6\lab6\obj\Debug\lab6.csproj.CoreCompileInputs.cache
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab6\lab6\obj\Debug\lab6.exe
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab6\lab6\obj\Debug\lab6.pdb

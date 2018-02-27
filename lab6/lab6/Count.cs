@@ -15,7 +15,7 @@ namespace lab6
             array = beginArray;
             sizeArray = size;
         }
-        public void Deleting()
+        public Tuple<int[], int> Deleting()
         {
             for (int i = 1; i < sizeArray; i++)
             {
@@ -28,10 +28,7 @@ namespace lab6
                     sizeArray--;
                 }
             }
-            for (int i = 0; i < sizeArray; i++)
-            {
-                Console.WriteLine(array[i]);
-            }
+            return Tuple.Create<int[], int>(array, sizeArray);
         }
     }
 }

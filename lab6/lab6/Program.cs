@@ -20,8 +20,13 @@ namespace lab6
             {
                 mas[i] = Convert.ToInt32(st[i]);
             }
-            Count newArray = new Count(mas, size);
-            newArray.Deleting(); 
+            Count newArray = new Count(mas,size);
+            Tuple<int[], int> result;
+            result = newArray.Deleting();
+            for (int i = 0; i < result.Item2; i++)
+            {
+                Console.WriteLine(result.Item1[i]);
+            }
             Console.ReadLine();
         }
     }
