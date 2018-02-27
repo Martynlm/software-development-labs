@@ -4,14 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<<<<<<< HEAD
-    <ProjectGuid>{29D140EC-1CFE-4131-A22C-0645B8CA5C28}</ProjectGuid>
-=======
-    <ProjectGuid>{A845104C-18AA-4D33-B69B-E68CC8AE1D2F}</ProjectGuid>
->>>>>>> 6e145de7758d83d71225b31378d3026fb952db72
+    <ProjectGuid>{4026971D-0646-47FE-B59B-7EFC3A956CF0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>lab3</RootNamespace>
-    <AssemblyName>lab3</AssemblyName>
+    <RootNamespace>lab5</RootNamespace>
+    <AssemblyName>lab5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,11 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="ArrayProcessing.cs" />
-=======
     <Compile Include="Count.cs" />
->>>>>>> 6e145de7758d83d71225b31378d3026fb952db72
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
