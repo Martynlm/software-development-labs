@@ -25,9 +25,6 @@ namespace lab3
             {
                 mas[i] = Convert.ToInt32(st[i]);
             }
-            ArrayProcessing even = new ArrayProcessing();
-            List<int> evenNumbers = even.Even(mas, size);
-            Console.WriteLine(evenNumbers);
             Count evenNumbers = new Count(mas);
             evenNumbers.Sorting();
             Console.ReadLine();
