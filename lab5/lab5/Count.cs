@@ -9,51 +9,31 @@ namespace lab5
     class Count
     {
         private int[] array;
-        private int sizeArray;
-        public Count(int[] beginArray, int size)
+        public Count(int[] beginArray)
         {
             array = beginArray;
-            sizeArray = size;
         }
         public void Addition()
         {
-            //for (int i = 0; i < sizeArray+1; i++)
-            //{
-            //    for(int j=0; j<sizeArray; j++)
-            //    {
-            //        if (Math.Abs((array[i]+array[j])- array.Max()) <= 2)
-            //        {
-            //            for (int k=array.Length - 1; k>i+1; k--)
-            //            {
-            //                array[i] = array[i - 1];
-            //            }
-            //            array[i + 1] = array[i] + array[j];
-            //            sizeArray++;
-            //        }
-            //    }
-            //}
-
-
-            for (int i = 0; i < sizeArray; i++)
+        List<int> newArray = new List<int>();
+        foreach (int i in array)
+        {
+        newArray.Add(i);
+        }
+        foreach(int i in array)
+        {
+            foreach(int j in array)
             {
-
-                if (array[i] > 100)
+                if(Math.Abs((i+j)-array.Max())<=1)
                 {
-                    for (int k = array.Length - 1; k > i + 1; k--)
-                    {
-                        array[k] = array[k - 1];
-                    }
-                    array[i + 1] = 10;
-                    sizeArray++;
+                    newArray.Insert(i+1, array.Max());
                 }
             }
-
-
-
-            for (int i = 0; i < sizeArray; i++)
-            {
-                Console.WriteLine(array[i]);
-            }
+        }
+            foreach(int i in newArray)
+             {
+                Console.Write(i + " ");
+             }
         }
     }
-}
+}   

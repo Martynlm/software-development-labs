@@ -19,7 +19,7 @@ namespace lab5
             {
                 mas[i] = Convert.ToInt32(st[i]);
             }
-            Count newArray = new Count(mas, size);
+            Count newArray = new Count(mas);
             newArray.Addition();
             Console.ReadLine();
         }
