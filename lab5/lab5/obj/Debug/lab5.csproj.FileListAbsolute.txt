@@ -5,3 +5,10 @@ C:\Users\hockr\source\repos\lab5\lab5\obj\Debug\lab5.csprojResolveAssemblyRefere
 C:\Users\hockr\source\repos\lab5\lab5\obj\Debug\lab5.csproj.CoreCompileInputs.cache
 C:\Users\hockr\source\repos\lab5\lab5\obj\Debug\lab5.exe
 C:\Users\hockr\source\repos\lab5\lab5\obj\Debug\lab5.pdb
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab5\lab5\bin\Debug\lab5.exe.config
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab5\lab5\bin\Debug\lab5.exe
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab5\lab5\bin\Debug\lab5.pdb
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab5\lab5\obj\Debug\lab5.csprojResolveAssemblyReference.cache
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab5\lab5\obj\Debug\lab5.csproj.CoreCompileInputs.cache
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab5\lab5\obj\Debug\lab5.exe
+C:\Users\hockr\Documents\GitHub\software-development-labs\lab5\lab5\obj\Debug\lab5.pdb

@@ -16,24 +16,37 @@ namespace lab5
         public void Addition()
         {
         List<int> newArray = new List<int>();
-        foreach (int i in array)
+        List<int> forIndexs = new List<int>();
+            foreach (int i in array)
         {
         newArray.Add(i);
         }
-        foreach(int i in array)
-        {
-            foreach(int j in array)
+            foreach (int i in newArray)
             {
-                if(Math.Abs((i+j)-array.Max())<=1)
+                foreach (int j in newArray)
                 {
-                    newArray.Insert(i+1, array.Max());
+                    if (Math.Abs((i + j) - array.Max()) <= 1)
+                    {
+                        forIndexs.Add(newArray.IndexOf(i));
+                    }
                 }
             }
-        }
-            foreach(int i in newArray)
-             {
+
+            foreach (int i in forIndexs)
+            {
                 Console.Write(i + " ");
-             }
+            }
+
+
+            //foreach(int i in forIndexs)
+            //{
+            //    newArray.Insert(i, array.Max());
+            //}
+
+            //foreach (int i in newArray)
+            // {
+            //    Console.Write(i + " ");
+            // }
         }
     }
 }   
