@@ -8,34 +8,35 @@ namespace lab3
         private int[] array;
         public Count(int[] beginArray)
         {
-           array = beginArray;
+            array = beginArray;
         }
 
-        public void Sorting()
+        public List<int> SortingEven()
         {
             List<int> evenNumbers = new List<int>();
-            List<int> unevenNumbers = new List<int>();
             foreach (int i in array)
             {
                 if (i % 2 == 0)
                 {
                     evenNumbers.Add(i);
                 }
-                else
+            }
+            return evenNumbers;
+        }
+
+        public List<int> SortingUneven()
+        {
+            List<int> unevenNumbers = new List<int>();
+            foreach (int i in array)
+            {
+                if (i % 2 != 0)
                 {
                     unevenNumbers.Add(i);
                 }
             }
-            Console.Write("Четные: ");
-            foreach (int i in evenNumbers)
-            {
-                Console.Write(i + " ");
-            }
-            Console.Write("\nНечетные: ");
-            foreach (int i in unevenNumbers)
-            {
-                Console.Write(i + " ");
-            }
+            return unevenNumbers;
         }
+
+
     }
 }

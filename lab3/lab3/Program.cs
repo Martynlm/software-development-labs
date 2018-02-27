@@ -17,16 +17,24 @@ namespace lab3
             s = Console.ReadLine();//непосредственно считывание. 
             string[] st = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             string array = Console.ReadLine();//объявление и считывание. 
-            string[] st = array.Split(new char[] { ' ' },
-            StringSplitOptions.RemoveEmptyEntries);
             int size = st.Length;
             int[] mas = new int[size];
             for (int i = 0; i < size; i++)
             {
                 mas[i] = Convert.ToInt32(st[i]);
             }
-            Count evenNumbers = new Count(mas);
-            evenNumbers.Sorting();
+            Count Numbers = new Count(mas);
+            Console.Write("Четные: ");
+            foreach (int i in Numbers.SortingEven())
+            {
+                Console.Write(i + " ");
+            }
+            Console.Write("\nНечетные: ");
+            foreach (int i in Numbers.SortingUneven())
+            {
+                Console.Write(i + " ");
+            }
+
             Console.ReadLine();
         }
     }
