@@ -15,7 +15,7 @@ namespace lab4
         }
 
  
-        public void Grouping()
+        public int[] Grouping()
         {
             Array.Reverse(arr);
             int p = Array.IndexOf(arr, arr.Max());
@@ -26,10 +26,7 @@ namespace lab4
             int tempo = arr[o];
             arr[o] = arr[0];
             arr[0] = tempo;
-            foreach (int k in arr)
-            {
-                Console.WriteLine(k);
-            }
+            return arr;
         }
 
     }

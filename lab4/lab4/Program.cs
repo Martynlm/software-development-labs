@@ -16,7 +16,10 @@ namespace lab4
                 mas[i] = Convert.ToInt32(st[i]);
             }
             Permutation arrayNumbers = new Permutation(mas);
-            arrayNumbers.Grouping();
+            foreach (int i in arrayNumbers.Grouping())
+            {
+                Console.WriteLine(i);
+            }
             Console.ReadLine();
         }
     }
