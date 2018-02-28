@@ -10,25 +10,29 @@ namespace lab6
     {
         private int[] array;
         private int sizeArray;
-        public Count(int[] beginArray, int size)
+        public Count(int[] beginArray)
         {
             array = beginArray;
-            sizeArray = size;
         }
-        public Tuple<int[], int> Deleting()
+        public List<int> Deleting()
         {
-            for (int i = 1; i < sizeArray; i++)
+            List<int> newArray = new List<int>();
+           foreach(int i in array)
             {
-                if(array[i]%array[0]==0)
+                    newArray.Add(i);
+            }
+
+            foreach (int i in newArray.ToArray())
+            {
+                if (newArray.IndexOf(i) == 0)
+                    continue;
+                if (i % newArray[0] == 0)
                 {
-                    for(int j = i; j<array.Length-1; j++)
-                    {
-                        array[j] = array[j + 1];
-                    }
-                    sizeArray--;
+                    newArray.Remove(i);
                 }
             }
-            return Tuple.Create<int[], int>(array, sizeArray);
+            return newArray;
         }
+    
     }
 }
