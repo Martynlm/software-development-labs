@@ -21,10 +21,18 @@ namespace lab5
         {
         newArray.Add(i);
         }
-            foreach (int i in newArray)
+            foreach (int i in newArray.ToArray())
             {
-                foreach (int j in newArray)
+                foreach (int j in newArray.ToArray())
                 {
+                    if (i == newArray.Max())
+                    {
+                        continue;
+                    }
+                    if (newArray.IndexOf(i)==newArray.IndexOf(j))
+                    {
+                        continue;
+                    }
                     if (Math.Abs((i + j) - array.Max()) <= 1)
                     {
                         forIndexs.Add(newArray.IndexOf(i));
@@ -37,16 +45,6 @@ namespace lab5
                 Console.Write(i + " ");
             }
 
-
-            //foreach(int i in forIndexs)
-            //{
-            //    newArray.Insert(i, array.Max());
-            //}
-
-            //foreach (int i in newArray)
-            // {
-            //    Console.Write(i + " ");
-            // }
         }
     }
 }   
