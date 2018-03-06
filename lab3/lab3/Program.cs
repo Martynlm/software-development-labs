@@ -2,10 +2,6 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab3
 {
@@ -30,7 +26,7 @@ namespace lab3
                 Console.Write(i + " ");
             }
             Console.Write("\nНечетные: ");
-            foreach (int i in Numbers.SortingUneven())
+            foreach (int i in Numbers.SortingOdd())
             {
                 Console.Write(i + " ");
             }
