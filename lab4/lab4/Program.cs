@@ -18,7 +18,7 @@ namespace lab4
             Permutation arrayNumbers = new Permutation(mas);
             foreach (int i in arrayNumbers.Grouping())
             {
-                Console.WriteLine(i);
+                Console.Write(i + " ");
             }
             Console.ReadLine();
         }
