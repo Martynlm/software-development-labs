@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab5
 {
@@ -16,8 +13,8 @@ namespace lab5
 
         private int NumberOfPositive()
         {
-            int value=0;
-            foreach(int i in array)
+            int value = 0;
+            foreach (int i in array)
             {
                 if (i > 0)
                     value++;
@@ -25,13 +22,13 @@ namespace lab5
             return value;
         }
 
-        private double Average()
+        private double PositiveAverage()
         {
             int averageOfNumbers = 0;
             int sumOfPositiveNumbers = 0;
             foreach (int i in array)
             {
-                if(i>0)
+                if (i > 0)
                 {
                     sumOfPositiveNumbers += i;
                 }
@@ -44,17 +41,17 @@ namespace lab5
 
         public List<int> Addition()
         {
-        List<int> newArray = new List<int>();
+            List<int> newArray = new List<int>();
             foreach (int i in array)
             {
-               newArray.Add(i);
-               if(Math.Abs(i) > Average())
+                newArray.Add(i);
+                if (Math.Abs(i) > PositiveAverage())
                 {
                     newArray.Insert(newArray.IndexOf(i) + 1, 0);
                 }
             }
-        return newArray;
+            return newArray;
         }
-       
+
     }
-}   
+}
