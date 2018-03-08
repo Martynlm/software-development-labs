@@ -14,18 +14,54 @@ namespace lab4
             arr = beginArray;
         }
 
- 
+        private int[] MinMore(int p, int o)
+        {
+            int r = o-p;
+            List<int> newArray = new List<int>();
+            for (int i = o - 1; i > p; i--)
+            {
+                newArray.Add(arr[i]);
+            }
+            Array.Reverse(newArray.ToArray());
+            int j = newArray.Count - 1;
+            for (int i = o - 1; i > p; i--)
+            {
+                arr[i] = newArray[j];
+                j--;
+            }
+            return arr;
+        }
+
+        private int[] MaxMore(int p, int o)
+        {
+            int r = p - o;
+            List<int> newArray = new List<int>();
+            for (int i = p - 1; i > o; i--)
+            {
+                newArray.Add(arr[i]);
+            }
+            Array.Reverse(newArray.ToArray());
+            int j = newArray.Count - 1;
+            for (int i = p - 1; i > o; i--)
+            {
+                arr[i] = newArray[j];
+                j--;
+            }
+            return arr;
+        }
+
         public int[] Grouping()
         {
-            Array.Reverse(arr);
             int p = Array.IndexOf(arr, arr.Max());
-            int tempp = arr[p];
-            arr[p] = arr[9];
-            arr[9] = tempp;
             int o = Array.IndexOf(arr, arr.Min());
-            int tempo = arr[o];
-            arr[o] = arr[0];
-            arr[0] = tempo;
+            if(p-o>0)
+            {
+                MaxMore(p, o);
+            }
+            else
+            {
+                MinMore(p, o);
+            }
             return arr;
         }
 
