@@ -24,7 +24,7 @@ namespace lab3
             return evenNumbers;
         }
 
-        public List<int> SortingUneven()
+        public List<int> SortingOdd()
         {
             List<int> unevenNumbers = new List<int>();
             foreach (int i in array)

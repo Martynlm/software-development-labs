@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab5
 {
@@ -11,8 +7,7 @@ namespace lab5
         static void Main(string[] args)
         {
             string array = Console.ReadLine();//объявление и считывание. 
-            string[] st = array.Split(new char[] { ' ' },
-            StringSplitOptions.RemoveEmptyEntries);
+            string[] st = array.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             int size = st.Length;
             int[] mas = new int[size];
             for (int i = 0; i < size; i++)
@@ -21,7 +16,9 @@ namespace lab5
             }
             Count newArray = new Count(mas);
             foreach (int i in newArray.Addition())
+            {
                 Console.Write(i + " ");
+            }
             Console.ReadLine();
         }
     }

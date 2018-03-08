@@ -5,3 +5,10 @@ C:\Users\hockr\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\la
 C:\Users\hockr\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\lab4.csproj.CoreCompileInputs.cache
 C:\Users\hockr\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\lab4.exe
 C:\Users\hockr\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\lab4.pdb
+C:\Users\Admin\Documents\GitHub\software-development-labs\lab4\lab4\bin\Debug\lab4.exe.config
+C:\Users\Admin\Documents\GitHub\software-development-labs\lab4\lab4\bin\Debug\lab4.exe
+C:\Users\Admin\Documents\GitHub\software-development-labs\lab4\lab4\bin\Debug\lab4.pdb
+C:\Users\Admin\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\lab4.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\lab4.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\lab4.exe
+C:\Users\Admin\Documents\GitHub\software-development-labs\lab4\lab4\obj\Debug\lab4.pdb

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab7
 {
@@ -15,12 +11,12 @@ namespace lab7
         }
 
         private int FindingIndexOfNegative()
-            {
+        {
             int maxOfNegative = 0;
             int indexOfNegative = 0;
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < array.GetLength(0); j++)
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < array.GetLength(1); i++)
                 {
                     if (array[i, j] < 0 && Math.Abs(array[i, j]) > maxOfNegative)
                     {
@@ -36,9 +32,9 @@ namespace lab7
         {
             int minOfPositive = array[0, 0];
             int indexOfPositive = 0;
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < array.GetLength(1); j++)
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < array.GetLength(0); i++)
                 {
                     if (array[i, j] > 0 && array[i, j] < minOfPositive)
                     {
@@ -55,7 +51,7 @@ namespace lab7
             int indexofPositive = FindingIndexOfPositive();
             int indexOfNegative = FindingIndexOfNegative();
             int temp = 0;
-            for(int i = 0; i<3; i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
                 temp = array[i, indexofPositive];
                 array[i, indexofPositive] = array[i, indexOfNegative];
