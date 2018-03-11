@@ -16,9 +16,9 @@ namespace lab6
 
             for (int i = 1; i < array.Count; i++)
             {
-                if (i % array[0] == 0)
+                if (array[i] % array[0] == 0)
                 {
-                    array.Remove(i);
+                    array.Remove(array[i]);
                     i--;
                 }
             }
