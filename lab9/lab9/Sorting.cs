@@ -32,7 +32,7 @@ namespace lab9
                     {
                         for (int y = 0; y < array.GetLength(1); y++)
                         {
-                            if (array[i, j] > array[x, y])
+                            if (array[i, j] < array[x, y])
                                 Swap(i, j, x, y);
                         }
                     }
