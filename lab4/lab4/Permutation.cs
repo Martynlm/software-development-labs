@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab4
 {
@@ -14,17 +12,17 @@ namespace lab4
             arr = beginArray;
         }
 
-        private int[] MinMore(int p, int o)
+        private int[] MinMore(int positive, int negative)
         {
-            int r = o-p;
+            int difference = negative- positive;
             List<int> newArray = new List<int>();
-            for (int i = o - 1; i > p; i--)
+            for (int i = negative - 1; i > positive; i--)
             {
                 newArray.Add(arr[i]);
             }
             Array.Reverse(newArray.ToArray());
             int j = newArray.Count - 1;
-            for (int i = o - 1; i > p; i--)
+            for (int i = negative - 1; i > positive; i--)
             {
                 arr[i] = newArray[j];
                 j--;
@@ -32,17 +30,17 @@ namespace lab4
             return arr;
         }
 
-        private int[] MaxMore(int p, int o)
+        private int[] MaxMore(int positive, int negative)
         {
-            int r = p - o;
+            int r = positive - negative;
             List<int> newArray = new List<int>();
-            for (int i = p - 1; i > o; i--)
+            for (int i = positive - 1; i > negative; i--)
             {
                 newArray.Add(arr[i]);
             }
             Array.Reverse(newArray.ToArray());
             int j = newArray.Count - 1;
-            for (int i = p - 1; i > o; i--)
+            for (int i = positive - 1; i > negative; i--)
             {
                 arr[i] = newArray[j];
                 j--;
@@ -52,15 +50,15 @@ namespace lab4
 
         public int[] Grouping()
         {
-            int p = Array.IndexOf(arr, arr.Max());
-            int o = Array.IndexOf(arr, arr.Min());
-            if(p-o>0)
+            int positive = Array.IndexOf(arr, arr.Max());
+            int negative = Array.IndexOf(arr, arr.Min());
+            if(positive-negative>0)
             {
-                MaxMore(p, o);
+                MaxMore(positive, negative);
             }
             else
             {
-                MinMore(p, o);
+                MinMore(positive, negative);
             }
             return arr;
         }
