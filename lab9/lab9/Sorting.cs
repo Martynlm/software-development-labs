@@ -1,41 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab9
 {
     class Sorting
     {
         private int[,] array;
+        private int[] newArray = new int[9];
         public Sorting(int[,] beginArray)
         {
         array = beginArray;
         }
 
-        private void Swap(int i, int j, int x, int y)
+        private int[] FormatinArray()
         {
-            int temp = array[i, j];
-            array[i, j] = array[x, y];
-            array[x, y] = temp;
+            int k = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    newArray[k] = array[i, j];
+                    k++;
+                }
+            }
+            Array.Sort(newArray);
+            return newArray;
         }
 
 
         public int[,] SortingNewArray()
         {
-            for (int i = 0; i < array.GetLength(0); i++)
+            FormatinArray();
+            int z = 0;
+            for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                for (int j = 0; j < 3; j++)
                 {
-                    for (int x = 0; x < array.GetLength(0); x++)
-                    {
-                        for (int y = 0; y < array.GetLength(1); y++)
-                        {
-                            if (array[i, j] < array[x, y])
-                                Swap(i, j, x, y);
-                        }
-                    }
+                    array[i, j] = newArray[z];
+                    z++;
                 }
             }
             return array;
