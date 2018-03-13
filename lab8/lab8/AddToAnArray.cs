@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace lab8
 {
@@ -14,12 +10,12 @@ namespace lab8
             array = oldArray;
         }
 
-        private int SumOfEven(int i)
+        private int SumOfPositive(int i)
         {
             int sum = 0;
-            for(int j=0; j<array.ToArray().GetLength(1); j++)
+            for (int j = 0; j < array[i].Count; j++)
             {
-                if(array[i][j]>0)
+                if (array[i][j] > 0)
                 {
                     sum += array[i][j];
                 }
@@ -30,13 +26,14 @@ namespace lab8
         public List<int> Add()
         {
             List<int> newArray = new List<int>();
-            for (int i = 0; i < array.Capacity; i++)
+            for (int i = 0; i < array.Count; i++)
             {
-                for(int j=0; j<array.Capacity; j++)
+                int sum = SumOfPositive(i);
+                for (int j = 0; j < array[i].Count; j++)
                 {
-                    if(array[i][j]<0)
+                    if (array[i][j] < 0)
                     {
-                        newArray.Add(SumOfEven(i));
+                        newArray.Add(sum);
                     }
                 }
             }
