@@ -99,14 +99,6 @@ window.onload = function alchemy(){
 		.enter()
 		.append("svg:image")
 		.attr("xlink:href", function(d) { return "../img/groups/" + d.name+ ".svg"; })
-		.attr("visibility", function (group) {
-			for (var i=0; i<group.subelements.length; i++){
-				if (group.subelements[i].discovered) { 
-					return "visible";
-				}
-			}
-			return "hidden";
-		})
 		.attr("width", groupsquare)
 		.attr("height", groupsquare)
 		.attr("x", offsetX)
@@ -121,14 +113,6 @@ window.onload = function alchemy(){
 		.enter()
 		.append("svg:image")
 		.attr("xlink:href", function(d) { return "../img/groups/" + d.name + ".svg"; })
-		.attr("visibility", function (group) {
-			for (var i=0; i<group.subelements.length; i++){
-				if (group.subelements[i].discovered) { 
-					return "visible";
-				}
-			}
-			return "hidden";
-		})
 		.attr("width", groupsquare)
 		.attr("height", groupsquare)
 		.attr("x", 780 + offsetX)
@@ -149,15 +133,6 @@ window.onload = function alchemy(){
 
 	//elements on the left
 	function onGroupClick(d) {
-		//display group on the game field
-		svg
-			.append("svg:image")
-			.attr("xlink:href",  function() { return "../img/groups/" + d.subelements[0].name + ".svg"; })
-			.attr("width", mainsquare)
-			.attr("height", mainsquare)
-			.attr("x", 100 + offsetX)
-			.attr("y", 160 + offsetY)
-			.attr("fill", function(){ return d.subelements[0].color;});
 		
 		// element's background
 		svg
@@ -187,15 +162,6 @@ window.onload = function alchemy(){
 
 	//elements on the right
 	function onRightGroupClick(d) {
-		svg
-			.append("svg:image")
-			.attr("xlink:href",  function() { return "../img/groups/" + d.subelements[0].name + ".svg"; })
-			.attr("width", mainsquare)
-			.attr("height", mainsquare)
-			.attr("x", 665 + offsetX)
-			.attr("y", 160 + offsetY)
-			.attr("fill", function(){ return d.color;});
-		
 		// element's background
 		svg
 			.append("g")
