@@ -103,7 +103,9 @@ window.onload = function alchemy(){
 		.attr("height", groupsquare)
 		.attr("x", offsetX)
 		.attr("y", function(d, i) {return i*(groupsquare + 2*margin) + offsetY;})
-		.on("click", onGroupClick);
+		.on("click", onGroupClick)
+		.append("svg:title")
+		.text(function(d) { return d.name; });
 
 	//Container witn groups on the right
 	svg.append("g")
@@ -117,7 +119,9 @@ window.onload = function alchemy(){
 		.attr("height", groupsquare)
 		.attr("x", 780 + offsetX)
 		.attr("y", function(d, i) {return i*(groupsquare + 2*margin) + offsetY;})
-		.on("click", onRightGroupClick);
+		.on("click", onRightGroupClick)
+		.append("svg:title")
+		.text(function(d) { return d.name; });
 
 	//game field
 	svg       
@@ -157,7 +161,9 @@ window.onload = function alchemy(){
 			.attr("x", function(d, i) {return i*(square+margin) + offsetX + 105;})
 			.attr("y", 55 + offsetY)
 			.attr("fill", function(d){ return d.color;})
-			.on("click", onElementClick);
+			.on("click", onElementClick)
+			.append("svg:title")
+		.text(function(d) { return d.name; });
 	}
 
 	//elements on the right
@@ -185,7 +191,9 @@ window.onload = function alchemy(){
 			.attr("x", function(d, i) {return i*(square+margin) + offsetX + 451;})
 			.attr("y", 275 + offsetY)
 			.attr("fill", function(d){ return d.color;})
-			.on("click", onRightElementClick);
+			.on("click", onRightElementClick)
+			.append("svg:title")
+		.text(function(d) { return d.name; });
 	}
 
 	function onElementClick(d){
